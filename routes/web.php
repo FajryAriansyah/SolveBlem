@@ -27,14 +27,4 @@ Route::get('/', function () {
     return view('solveblem/landing');
 });
 
-
-Route::get('/user-create-contest', function () {
-    return view('solveblem/user-create-contest');
-});
-
-Route::get('/problem', function() {
-    return view('solveblem/problem');
-});
-Route::get('solveblem/create-problem', function() {
-    return view('solveblem/create-problem');
-});
+Route::get('solveblem/user/contest', [SolveblemController::class, 'user_contest']);
