@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="container">
-        <h1 class="title">Submissions</h1>
+        <h1 class="submission-title">Submissions</h1>
         <div class="problem-submission">
             <div class="problem-contain">
                 <a href="#" class="problem_link">Problem</a>
@@ -16,7 +16,7 @@
     </div>
 
     <div class="container">
-        <div class="titles">
+        <div class="title">
             <h1>Submissions History</h1>
         </div>
 
