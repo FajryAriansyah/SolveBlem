@@ -1,46 +1,356 @@
-body{
-    margin:0;
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&family=Poppins:wght@400;600;700&display=swap');
+
+:root{
+    --header-height: 3rem;
+    --first-color: #F7C873;
+    --second-color: #FAEBCD;
+    --border-contest-color: #B1B1B1;
+    --rule-contest-color: #F3F3F3;
+    --text-color: #000000;
+    --title-font: 'Patua One', cursive;
+    --text-font: 'Poppins', sans-serif;
+    --title-weight: 700;
+    --text-weight: 400;
+    --brand-size: 1.875rem;
+    --title-size: 1.75rem; 
+    --text-size: 1.125rem;
+}
+
+*{
+    margin: 0;
     padding: 0;
-    left:0;
-    top:0;
     box-sizing: border-box;
 }
-.content{
-    height: 200%;
-    padding: 50px 0px;
-    background-color: #ebe7e7;
-    padding: 150px 170px
+
+body{
+    font-family: var(--text-font);
+    font-size: var(--text-size);
 }
 
-.center{
-    margin:0 40px;
-    margin: auto;
-    text-align:justify;
+
+li{
+    list-style: none;
 }
-.container{
-    background-color: #fff ;
-    margin-bottom: 10px;
-    padding:10px;
-    border:solid 2px 2px black;
+
+/*====================== Nav ========================*/
+
+.nav_brand{
+    text-decoration: none;
+    font-family: var(--title-font);
+    font-weight: var(--title-weight);
+    font-size: var(--brand-size);
+    color: var(--text-color);
+    margin-bottom: .6rem;
+}
+
+.nav{
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_list{
+    display: flex;
+    margin-top: 1rem;
+}
+
+.nav_item {
+    margin-right: 1rem;
+}
+
+
+.nav_link{
+    color: var(--text-color);
+    padding: .2rem .5rem;
+    text-decoration: none;
+    display: inline-block; 
+    font-family: var(--text-font);
+}
+
+.nav a:hover{
+    color: var(--text-color);
+    opacity: .7;
+}
+
+/* ================== Submission ======================= */
+.submission-title, .title-contest{
+    margin-top: 2rem;
+    font-family: var(--text-font);
+    font-size: var(--title-size);
+    font-weight: var(--title-weight);
+    color: var(--text-color);
+    border-bottom: 1px solid var(--text-color);
+    padding-bottom: 1rem;
+}
+
+.problem-submission{
+    border-top: 1px solid var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 2rem;
+    background-color: var(--first-color);
+    border: 1px solid var(--text-color);
+    border-radius: 1.5rem;
+    max-width: 28rem;
+    margin: 2rem auto;
+}
+
+.problem-submission a{
+    font-family: var(--text-font);
+}
+
+.problem-contain{
+    border-right: 1px solid var(--text-color);
+    padding: .24rem 5rem .24rem 0;
+}
+
+.submission-contain{
+    padding: .24rem 0 .24rem 2.4rem;
+}
+
+.problem_link, .submission_link{
+    text-decoration: none;
+    color: var(--text-color);
+    text-align: center;
+    
+}
+
+.problem-submission a:hover{
+    color: var(--text-color);
+    opacity: .7;
+}
+
+/* ========================== Table ============================ */
+
+table {
+    border-collapse: collapse;
+    width: 90%;
+    margin: 0 3.5rem;
+    border: 1px solid var(--text-color);
+}
+
+.title{
+    display: flex;
+    background-color: var(--first-color);
+    margin-top: 2rem;
+    border-top-left-radius: 2.188rem;
+    border-top-right-radius: 2.188rem;
+}
+
+.title h1{
+    font-family: var(--text-font);
+    font-weight: var(--title-weight);
+    font-size: var(--title-size);
+    color: var(--text-color);
+    margin:  .934rem 0 .725rem 3.1rem;
+}
+
+.inner-wrap{
+    background-color: var(--second-color);
+    padding: 1.7rem 0 .625rem 0;
+    border-bottom-left-radius: 2.188rem;
+    border-bottom-right-radius: 2.188rem;
+    box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.75);
+    margin-bottom: 1.75rem;
+}
+
+.table th, .table td{
+    padding: 8px;
+    text-align: left;
+    border: 1px solid var(--text-color);
+    text-align: center;
+    font-family: var(--text-font);
+    
+}
+
+
+
+/* ===================== Halaman ======================== */
+
+.page{
+    display: flex;
+    padding-top: 1.2rem;
+    align-items: center;
+    margin-left: 3.5rem;
+}
+
+.next-page{
+    display: flex;
+    margin: 0 2.4rem .5rem auto;
+}
+
+.display-page{
+    font-family: var(--text-font);
+}
+
+.number{
+    margin: .5rem .56rem;
+    font-family: var(--text-font);
+    font-size: 1.438rem;
+}
+
+/* ============== Halaman Profile Submission History =========================== */
+.profile-menu{
+    margin-top: 2.3rem;
+    background-color: var(--first-color);
+    padding-bottom: .5rem;
+    padding-top: .4rem;
+    border-top-left-radius: 2.188rem;
+    border-top-right-radius: 2.188rem;
+}
+
+.wrap-left{
+    max-width: 400px;
+    order: 0;
+}
+
+.content-profile-menu{
+    background-color: var(--second-color);
+    box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.75);
+    border-bottom-left-radius: 2.188rem;
+    border-bottom-right-radius: 2.188rem;
+    padding-bottom: 6.4rem;
+}
+
+.content-profile-menu a:hover{
+    color: #000000;
+    opacity: .7;
+}
+
+.profile-menu h1{
+    font-family: var(--text-font);
+    font-size: var(--title-size);
+    font-weight: var(--title-weight);
+    color: var(--text-color);
+    position: relative;
+    top: .8rem;
+    left: 1.2rem;
+}
+
+.profile{
+    padding: 1rem 0 0 .89rem;
+}
+
+
+.profile a, .submis-history a{
+    display: flex;
+}
+
+.profile-text{
+    align-self: center;
+}
+
+.submission-history-text{
+    align-self: center;
+}
+
+.profile-text, .submission-history-text{
+    margin-left: .7rem;
+}
+
+.submis-history{
+    padding: 1rem 0 0 .5rem;
+}
+
+.content-profile-menu a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-family: var(--text-font);
+}
+
+.rows{
+    display: flex;
+    flex-direction: row;
+}
+
+.wrap{
+    order: 1;
+    margin-left: 2rem;
+    width: 80%;
+}
+
+/* ==================== Profile ========================== */
+.balance{
+    display: flex;
+}
+
+.user-profile {
+    margin-right: 1.1rem;
+    padding-right: 1.1rem;
+    margin: 0 1.3rem;
+}
+
+.user-profile::after {
+    content: "";
+    position: absolute;
+    top: 140px;
+    left: 500px;
+    height: 220px;
+    border-right: 1px solid black;
+}
+
+.text-user{
+    text-align: center;
+    margin-top: .7rem;
+}
+
+.text-scores, .text-attempted{
+    margin-left: 1rem;
+}
+
+/* ====================== Contest ======================= */
+.contest-content{
+    background-color: var(--second-color);
+    max-width: 920px;
+    padding: 1rem 1rem 2rem;
     border-radius: 10px;
-    box-shadow: 0px 0px 15px rgba(0,0,0,0.07);
-}
-.container p{
-    width: fit-content;
+    margin-bottom: 5rem;
 }
 
-.atasan {
-    max-width: 100px;
-}
-
-#c-input, #c-output{
-    background-color: #c9c9c9;
-    width: 100%;
-    padding:5px 10px;
+.contest-text{
+    background-color: var(--rule-contest-color);
+    border: 1px solid var(--border-contest-color);
+    margin-bottom: .2rem;
+    box-shadow: 8px 4px 4px 0px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
+    padding: .2rem 0 .2rem 1rem;
+    font-family: var(--text-font);
+}
 
+.question-problem, .create-problem{
+    background-color: var(--rule-contest-color);
+    padding: .8rem .5rem .3rem;
+    border: 1px solid var(--border-contest-color);
+    box-shadow: 8px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    font-family: var(--text-font);
+    border-radius: 10px;
+    text-align: center;
 }
-.container p{
-    padding:5px 15px;
-    font-size: 18px;
+
+.choose, .create{
+    color: var(--text-color);
 }
+
+.choose:hover, .create:hover{
+    color: var(--text-color);
+    opacity: .7;
+}
+
+
+.question-problem{
+    margin-right: .7rem;
+    max-width: 200px;
+}
+
+.text-problem{
+    margin-top: .89rem;
+    font-family: var(--text-font);
+}
+
+/*====================== footer =========================*/
+.footer p{
+    text-align: center;
+}
+
