@@ -447,3 +447,49 @@ button{
     text-align: center;
 }
 
+body{
+    margin:0;
+    padding: 0;
+    left:0;
+    top:0;
+    box-sizing: border-box;
+}
+.content{
+    height: 200%;
+    padding: 50px 0px;
+    background-color: #ebe7e7;
+    padding: 150px 170px
+}
+
+.center{
+    margin:0 40px;
+    margin: auto;
+    text-align:justify;
+}
+.container{
+    background-color: #fff ;
+    margin-bottom: 10px;
+    padding:10px;
+    border:solid 2px 2px black;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.07);
+}
+.container p{
+    width: fit-content;
+}
+
+.atasan {
+    max-width: 100px;
+}
+
+#c-input, #c-output{
+    background-color: #c9c9c9;
+    width: 100%;
+    padding:5px 10px;
+    border-radius: 10px;
+
+}
+.container p{
+    padding:5px 15px;
+    font-size: 18px;
+}
