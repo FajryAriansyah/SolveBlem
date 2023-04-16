@@ -37,17 +37,7 @@ class SolveblemController extends Controller
     {
         return view('solveblem.contest');
     }
-
-    public function your_contest()
-    {
-        return view('solveblem.your_contest');
-    }
-
-    public function user_contest()
-    {
-        return view('solveblem.user_contest');
-    }
-
+    
     public function about()
     {
         return view('solveblem.about');
