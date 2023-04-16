@@ -14,6 +14,7 @@
     --text-color: #000000;
     --title-font: 'Patua One', cursive;
     --contest-font:'Montserrat', sans-serif;
+    --landing-font-title: 'Montserrat', sans-serif;
     --text-font: 'Poppins', sans-serif;
     --title-weight: 700;
     --text-weight: 400;
@@ -304,6 +305,13 @@ li{
     font-family: var(--text-font);
 }
 
+/*===================== Problems ==========================*/
+.container-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 /* ===================== Halaman Create Contest ===================== */
 .contest-content{
