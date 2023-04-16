@@ -3,8 +3,10 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\User;
 use App\Models\Problem;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -33,6 +35,19 @@ class DatabaseSeeder extends Seeder
             'contoh_output' => '10<br>2<br>24<br>1<br>2',
             'case_input' => '6 4',
             'case_output' => '10<br>2<br>24<br>1<br>2',
+        ]);
+
+        User::create([
+            'name' => 'Fajry',
+            'username' => 'Papazy',
+            'email' => 'fajry@mhs.unsyiah.ac.id',
+            'password' => Hash::make('fajry'),
+        ]);
+        User::create([
+            'name' => 'Habil',
+            'username' => 'Noitusanx',
+            'email' => 'habil@mhs.unsyiah.ac.id',
+            'password' => Hash::make('habil'),
         ]);
     }
 }

@@ -17,30 +17,23 @@ use App\Http\Controllers\SolveblemController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-Route::get('/', function () {
-    return view('solveblem.landing');
-});
-
-// authentication
+// Home
+Route::get('/', function () {return view('solveblem.landing');});
+// Authentication
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout',[LoginController::class, 'logout']);
-
 Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
-
-
-
 // Problem
-
 Route::get('/problem/create', [ProblemController::class, 'create']);
 Route::get('/problem', [ProblemController::class, 'showList']);
 Route::get('/problem/{slug}', [ProblemController::class, 'index']);
 Route::post('/problem/create/store', [ProblemController::class, 'store']);
-
 // Constest
-
+Route::get('/contest/{contest:slug}/create/problem', [ContestController::class, 'problem']);
 Route::get('/contest', [ContestController::class, 'index']);
-Route::get('/contest/create', [ContestController::class, 'create']);
 Route::post('/contest/store', [ContestController::class, 'store']);
+Route::get('/contest/create', [ContestController::class, 'create']);
+// Route::get('/contest/{contest:slug}', [ContestController::class, 'show']);
+// Route::get('/contest/{contest:slug}/create/problem/create', [ContestController::class, 'problem']);

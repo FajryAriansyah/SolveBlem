@@ -1,6 +1,16 @@
-@extends('layouts.main')
-@section('container')
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solveblem</title>
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}">
+</head>
+
+<body>
     <div class="black-container" style="background-color:#1A1A1B; clip-path: polygon(0 0, 100% 0, 100% 87%, 0% 100%);">
         <header class="header container" id="header">
             <nav class="nav">
@@ -10,13 +20,13 @@
                 <div class="nav_menu" id="nav-menu" style="z-index: 1000">
                     <ul class="nav_list">
                         <li class="nav_item">
-                            <a href="{{url("solveblem")}}" class="nav_link active-link" id="white-color">Home</a>
+                            <a href="{{url("/")}}" class="nav_link active-link" id="white-color">Home</a>
                         </li>
                         <li class="nav_item">
                             <a href="{{url("/problem")}}" class="nav_link" id="white-color">Problem</a>
                         </li>
                         <li class="nav_item">
-                            <a href="{{url("/contest")}}" class="nav_link" id="white-color">Ranking</a>
+                            <a href="{{url("/contest")}}" class="nav_link" id="white-color">Contest</a>
                         </li>
                         <li class="nav_item">
                             <a href="#" class="nav_link signup">Sign Up</a>
@@ -64,5 +74,8 @@
         </footer>
     </div>
   <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
-@endsection
+</body>
+
+</html>
+
 

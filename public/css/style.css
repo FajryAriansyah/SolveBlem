@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Patua+One&family=Poppins:wght@400;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Patua+One&family=Poppins:wght@400;600;700&display=swap');
 
 :root{
     --header-height: 3rem;
@@ -8,18 +7,21 @@
     --third-color: #FFE5B2;
     --enter-contest-color: #F7C873;
     --button-enter-color: #C5A05E;
+    --mulai-button-color: #29AA26;
     --button-color: #6E40C9;
     --border-contest-color: #B1B1B1;
     --rule-contest-color: #F3F3F3;
     --text-color: #000000;
     --title-font: 'Patua One', cursive;
     --contest-font:'Montserrat', sans-serif;
+    --landing-font-title: 'Montserrat', sans-serif;
     --text-font: 'Poppins', sans-serif;
     --title-weight: 700;
     --text-weight: 400;
     --brand-size: 1.875rem;
     --title-size: 1.75rem; 
     --text-size: 1.125rem;
+   
 }
 
 *{
@@ -33,9 +35,16 @@ body{
     font-size: var(--text-size);
 }
 
+.main{
+    min-height: 80vh;
+}
 
 li{
     list-style: none;
+}
+
+#white-color{
+    color: white;
 }
 
 /*====================== Nav ========================*/
@@ -78,6 +87,66 @@ li{
     color: var(--text-color);
     opacity: .7;
 }
+
+
+/* ============== Landing Page ================== */
+.signup{
+    background-color: #F7C873;
+    padding: .2rem .6rem;
+    border-radius: 10px;
+}
+
+.login{
+    padding: .2rem 1rem;
+    background-color: #6E40C9;
+    color: white;
+    border-radius: 10px;
+}
+
+.btn-mulai{
+    margin-top: 2rem;
+    padding: .3em 1.3em;
+    border-radius: 10px;
+    background-color: var(--mulai-button-color);
+    border: none;
+}
+
+.btn-mulai a{
+    text-align: center;
+    color: var(--text-color);
+    text-decoration: none;
+    font-family: var(--text-font);
+}
+
+.btn-mulai:hover{
+    opacity: .7;
+}
+
+.btn-mulai a:hover{
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.title-landing{
+    font-family: var(--landing-font-title);
+    font-size: 3.5rem;
+    margin-top: 4.5rem;
+}
+
+.services-content{
+    display: flex;
+    justify-content: center;
+    font-family: var(--text-font);
+}
+
+.landing-left-content, .landing-right-content{
+    width: 40%;
+}
+
+.footer-landing{
+    align-content: center;
+}
+
 
 /* ================== Submission ======================= */
 .title, .title-contest{
@@ -171,8 +240,84 @@ li{
 }
 
 
+/*===================== Problems ==========================*/
+.container-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-/* ===================== Halaman ======================== */
+.container-item{
+    background-color: #fff ;
+    margin-bottom: 10px;
+    border:solid 2px 2px black;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.07);
+    max-width: 900px;
+    width: 100%;
+    padding:10px 30px;
+    font-family: var(--text-font);
+}
+
+.container-center + .container-item{
+    padding:10px;
+}
+
+.atasan {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding: 10px;
+}
+
+#paket_latihan-text{
+    font-size: var(--text-font);
+    margin-left: 2rem;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+#judul{
+    font-family: var(--text-font);
+}
+
+
+/* ===================== Halaman Create Contest ===================== */
+.contest-content{
+    background-color: var(--second-color);
+    max-width: 920px;
+    padding: 1rem 1rem 2rem;
+    border-radius: 10px;
+    margin-bottom: 3rem;
+    border: 2px solid var(--border-contest-color);
+    box-shadow: 8px 4px 4px 0px rgba(0, 0, 0, 0.25);    
+}
+
+.form-contest{
+    padding: 30px 20px;
+    width: 100%;
+    border-radius:20px;
+}
+
+.form-contest .inputForm-contest{
+    background-color: #fff;
+    width: 100%;
+    padding: 2px 5px;
+    border-radius: 10px;
+    margin-top: .8rem;
+}
+
+.form-contest .inputForm-contest input{
+    width: 80%;
+}
+
+.form-contest .inputForm-contest input:focus{
+    outline: none;
+}
+/* ===================== Halaman (Page Number) ======================== */
 
 .page{
     display: flex;
@@ -466,7 +611,7 @@ li{
 }
 
 .contest{
-    margin: 1rem 0 0 1.5rem;
+    margin: 0 0 0 1.5rem;
 }
 
 .button-contest{
@@ -477,9 +622,83 @@ li{
     border-radius: 10px;
 }
 
+/* ===================== Halaman list ===================== */
+:root{
+    --bg-content:#F3E8E8;
+    --color-ac: #29aa26;
+    --card-color-second: #d4c29e;
+}
+
+.sidebar{
+    gap:10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content{
+    background-color: var(--bg-content);
+    box-shadow: 8px 4px 4px 0px rgba(0,0,0,0.25);
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: 2px solid var(--border-contest-color);
+    font-family: var(--text-font);
+}
+
+.main-content{
+    flex-grow: 1;
+    max-width: 865px;
+}
+.main-content .h2{
+    font-size: var(--title-size);
+    font-weight: var(--title-weight);
+}
+.side-content{
+    width:250px;
+}
+
+.content-card{
+    padding:10px 35px;
+    background-color: var(--first-color);
+    box-shadow: 8px 4px 4px 0px rgba(0,0,0,0.25);
+    border: 1px solid var(--border-contest-color);
+    border-radius: 10px;
+    margin:10px;
+}
+.content-card:hover{
+    background-color: var(--card-color-second);
+    cursor: pointer;
+}
+.progressBar{
+    color:grey;
+    width: 100%;
+}
+.progress{
+    color: var(--color-ac);
+    height:8px;
+    margin: 10px 0;
+}
+
+.side-content{
+    background-color: var(--bg-content);
+    box-shadow: 8px 4px 4px 0px rgba(0,0,0,0.25);
+    border-radius: 5px;
+    border: 2px solid var(--border-contest-color);
+    font-family: var(--text-font);
+}
+
+.category{
+    background-color: #F7C873;
+  
+}
+
+.category h1{
+    font-family: var(--text-font);
+    font-size: var(--title-size);
+    font-weight: var(--title-weight);
+    color: var(--text-color);
+}
 
 /*====================== footer =========================*/
 .footer p{
     text-align: center;
 }
-
