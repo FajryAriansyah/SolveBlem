@@ -34,6 +34,9 @@ body{
     font-size: var(--text-size);
 }
 
+.main{
+    min-height: 80vh;
+}
 
 li{
     list-style: none;

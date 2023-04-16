@@ -5,7 +5,7 @@
 </div>
 <div class="container">
     <div class="contest-content mt-3">
-        <div class="form-contest" action="/contest/create" method="POST">
+        <div class="form-contest" action="/contest/store" method="POST">
             <div class="inputForm-contest">
                 Contest Name : <input name="title" type="text" placeholder="Contest Name">
             </div>
@@ -34,5 +34,4 @@
             </button>
         </div>
     </div>
-</div>
 @endsection

@@ -3,14 +3,18 @@
 <div class="container">
     <div class="contest-content mt-5" style="max-width: 1100px; padding-top:4rem; padding-bottom:7rem;">
     <div class="rows">
-        <div class="question-problem">
-            <p class="question">A. Menghitung Jumlah Bilangan Genap</p>
-            <p class="author">By Fajry</p>
-        </div>
+        @if($problems->count())
+            @foreach($problems as $problem)
+                <div class="question-problem">
+                    <p class="question">{{ $problem->judul }}</p>
+                    <p class="author">By {{ $problem->user->id }}</p>
+                </div>
+            @endforeach
+        @endif
         <div class="problem">
-            <a href="#" class="choose">Choose a Problem</a>
+            <a href="{{ url('/contest/create/problem/select') }}" class="choose">Choose a Problem</a>
             <br>or<br>
-            <a href="#" class="create">Create a Problem</a>
+            <a href="{{ url('/contest/create/problem/create') }}" class="create">Create a Problem</a>
         </div>
     </div>
     <div class="contest mt-3">

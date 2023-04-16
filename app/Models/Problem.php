@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Contest;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Problem extends Model
 {
@@ -11,4 +12,12 @@ class Problem extends Model
 
     protected $table = 'problem';
     protected $guarded = ['id'];
+
+    public function answer(){
+        return $this->belongsToMany(User::class)
+            ->withTimestamps();
+    }
+    public function contest(){
+        return $this->belongsToMany(Contest::class);
+    }
 }

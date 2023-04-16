@@ -18,11 +18,14 @@ class ContestController extends Controller
     {
         return view('contest.createContest');
     }
-
-    public function store(Request $request)
+    public function create_problem()
     {
-        $request['slug'] = str_replace(' ', '-', strtolower($request->title));
-
+        return view('contest.createProblem');
+    }
+   
+    public function store(Request $request){
+        $request['slug'] = str_replace(' ','-',strtolower($request->title));
+        
         $validated = $request->validate([
             'title' => 'required|max:255',
             'slug' => 'required|unique:problem',
@@ -32,31 +35,23 @@ class ContestController extends Controller
             'max_participant' => 'required',
             'password' => 'required',
         ]);
-
+        
         $validated['password'] = Hash::make($validated['password']);
-        Contest::create($validated);
+        Contest::create($validated); 
         // dd($validated);
 
-        return redirect('contest/' . $request->slug . '/create/problem');
+        return redirect('contest/'.$request->slug.'/create/problem');
     }
 
-    // public function problem(Contest $contest){
+    public function problem(Contest $contest){
 
-    //     $problems = ContestProblem::
-
-    //     return view('contest.createProblem', compact('problems'));
-    // }
-    public function problemStore()
-    {
+        // $problems = ContestProblem::
+        return view('contest.createProblem', compact('problems'));
+    }
+    public function problemStore(){
         return redirect('/contest');
     }
-    public function show()
-    {
+    public function show(){
         //
-    }
-
-    public function participantContest()
-    {
-        return view('contest.participantContest');
     }
 }
