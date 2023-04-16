@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Patua+One&family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Patua+One&family=Poppins:wght@400;600;700&display=swap');
+
 
 :root{
     --header-height: 3rem;
@@ -166,7 +168,7 @@ button{
 }
 
 /* ================== Submission ======================= */
-.submission-title, .title-contest{
+.title, .title-contest{
     margin-top: 2rem;
     font-family: var(--text-font);
     font-size: var(--title-size);
@@ -216,7 +218,7 @@ button{
 
 /* ========================== Table ============================ */
 
-table {
+.table-submission {
     border-collapse: collapse;
     width: 90%;
     margin: 0 3.5rem;
@@ -429,7 +431,6 @@ table {
     color: var(--text-color);
     opacity: .7;
 }
-
 
 .question-problem{
     margin-right: .7rem;

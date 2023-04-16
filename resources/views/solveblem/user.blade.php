@@ -9,7 +9,7 @@
 @include('layouts.profile')
 
 <div class="wrap">
-        <div class="title">
+        <div class="titles">
             <h1>Profile</h1>
         </div>
         <div class="inner-wrap rows balance">
@@ -22,7 +22,7 @@
                 <p>Rating </p>
             </div>
         </div>
-        <div class="title">
+        <div class="titles">
             <h1>Problem Statistics</h1>
         </div>
         <div class="inner-wrap statistics">
