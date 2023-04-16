@@ -17,7 +17,6 @@ class ContestController extends Controller
     public function create(){
         return view('contest.createContest');
     }
-
     public function store(Request $request){
         $request['slug'] = str_replace(' ','-',strtolower($request->title));
         
