@@ -44,16 +44,3 @@ Route::post('/problem/create/store', [ProblemController::class, 'store']);
 Route::get('/contest', [ContestController::class, 'index']);
 Route::get('/contest/create', [ContestController::class, 'create']);
 Route::post('/contest/store', [ContestController::class, 'store']);
-
-
-Route::get('solveblem/submissions', [SolveblemController::class, 'index']);
-
-Route::get('solveblem/profiles/user/submission-history', [SolveblemController::class, 'create']);
-
-Route::get('solveblem/profiles/user', [SolveblemController::class, 'user']);
-
-Route::get('solveblem/contest', [SolveblemController::class, 'contest']);
-
-Route::get('solveblem/your/contest', [SolveblemController::class, 'your_contest']);
-
-Route::get('solveblem/user/contest', [SolveblemController::class, 'user_contest']);
