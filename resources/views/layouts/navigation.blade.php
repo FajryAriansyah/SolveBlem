@@ -17,7 +17,7 @@
             <div class="nav_menu" id="nav-menu">
                 <ul class="nav_list">
                     <li class="nav_item">
-                        <a href="#" class="nav_dsadsalink active-link">Home</a>
+                        <a href="#" class="nav_link active-link">Home</a>
                     </li>
                     <li class="nav_item">
                         <a href="#" class="nav_link">Problem</a>
