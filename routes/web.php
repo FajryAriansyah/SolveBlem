@@ -14,9 +14,6 @@ use App\Http\Controllers\SolveblemController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::get('solveblem/submissions', [SolveblemController::class, 'index']);
 
@@ -37,3 +34,20 @@ Route::get('solveblem/profiles/user/submission-history', [SolveblemController::c
 Route::get('solveblem/profiles/user', [SolveblemController::class, 'user']);
 
 Route::get('solveblem/user/contest', [SolveblemController::class, 'contest']);
+Route::get('solveblem/user/contest', [SolveblemController::class, 'contest']);
+
+Route::get('/', function () {
+    return view('solveblem/landing');
+});
+
+
+Route::get('/user-create-contest', function () {
+    return view('solveblem/user-create-contest');
+});
+
+Route::get('/problem', function() {
+    return view('solveblem/problem');
+});
+Route::get('solveblem/create-problem', function() {
+    return view('solveblem/create-problem');
+});
