@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProblemController;
 use App\Http\Controllers\SolveblemController;
 
 /*
@@ -24,30 +25,22 @@ Route::get('solveblem/profiles/user', [SolveblemController::class, 'user']);
 Route::get('solveblem/user/contest', [SolveblemController::class, 'contest']);
 
 Route::get('/', function () {
-    return view('solveblem/landing');
+    return view('layouts.main');
 });
 
-Route::get('solveblem/user/contest', [SolveblemController::class, 'user_contest']);
-
-Route::get('solveblem/profiles/user/submission-history', [SolveblemController::class, 'create']);
-
-Route::get('solveblem/profiles/user', [SolveblemController::class, 'user']);
-
-Route::get('solveblem/user/contest', [SolveblemController::class, 'contest']);
-Route::get('solveblem/user/contest', [SolveblemController::class, 'contest']);
-
-Route::get('/', function () {
-    return view('solveblem/landing');
-});
-
+// Route::get('/', function () {
+//     return view('solveblem/landing');
+// });
 
 Route::get('/user-create-contest', function () {
     return view('solveblem/user-create-contest');
 });
 
-Route::get('/problem', function() {
-    return view('solveblem/problem');
-});
 Route::get('solveblem/create-problem', function() {
     return view('solveblem/create-problem');
 });
+
+
+// Problem
+Route::get('/problem', [ProblemController::class, 'showList']);
+Route::get('/problem/{slug}', [ProblemController::class, 'index']);
