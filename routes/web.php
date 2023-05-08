@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContestController;
 use App\Http\Controllers\ProblemController;
 use App\Http\Controllers\SolveblemController;
 
@@ -14,15 +15,6 @@ use App\Http\Controllers\SolveblemController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-
-Route::get('solveblem/submissions', [SolveblemController::class, 'index']);
-
-Route::get('solveblem/profiles/user/submission-history', [SolveblemController::class, 'create']);
-
-Route::get('solveblem/profiles/user', [SolveblemController::class, 'user']);
-
-Route::get('solveblem/user/contest', [SolveblemController::class, 'contest']);
 
 Route::get('/', function () {
     return view('layouts.main');
@@ -42,5 +34,11 @@ Route::get('solveblem/create-problem', function() {
 
 
 // Problem
+Route::get('/problem/create', [ProblemController::class, 'create']);
 Route::get('/problem', [ProblemController::class, 'showList']);
 Route::get('/problem/{slug}', [ProblemController::class, 'index']);
+Route::post('/problem/create/store', [ProblemController::class, 'store']);
+
+// Constest
+
+Route::get('/contest', [ContestController::class, 'index']);
