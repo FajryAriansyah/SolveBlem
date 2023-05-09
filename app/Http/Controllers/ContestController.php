@@ -9,4 +9,12 @@ class ContestController extends Controller
     public function index(){
         return view('contest.contest');
     }
+
+    public function create(){
+        return view('contest.createContest');
+    }
+    public function store(){
+
+        return redirect('contest/{}');
+    }
 }

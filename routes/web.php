@@ -20,20 +20,18 @@ Route::get('/', function () {
     return view('layouts.main');
 });
 
-// Route::get('/', function () {
-//     return view('solveblem/landing');
-// });
+// authentication
+Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
+Route::post('/login', [LoginController::class, 'authenticate']);
+Route::post('/logout',[LoginController::class, 'logout']);
 
-Route::get('/user-create-contest', function () {
-    return view('solveblem/user-create-contest');
-});
+Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
+Route::post('/register', [RegisterController::class, 'store']);
 
-Route::get('solveblem/create-problem', function() {
-    return view('solveblem/create-problem');
-});
 
 
 // Problem
+
 Route::get('/problem/create', [ProblemController::class, 'create']);
 Route::get('/problem', [ProblemController::class, 'showList']);
 Route::get('/problem/{slug}', [ProblemController::class, 'index']);
@@ -42,3 +40,7 @@ Route::post('/problem/create/store', [ProblemController::class, 'store']);
 // Constest
 
 Route::get('/contest', [ContestController::class, 'index']);
+Route::get('/contest/create', [ContestController::class, 'create']);
+Route::post('/contest/store', [ContestController::class, 'store']);
+
+
