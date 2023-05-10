@@ -21,10 +21,26 @@
                     <a href="#" class="nav_link">About</a>
                 </li>
                 @auth
-                <li class="nav_item">
-                    <a href="#" class="nav_image">
+                <li class="nav_item dropdown">
+                    <a href="#" class="nav_image nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
                         <i class="bi bi-person-circle"></i>
                     </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="/"><i
+                                    class="bi bi-layout-text-sidebar-reverse"></i>My Dashboard</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li>
+                            <form action="/logout" method="POST">
+                                @csrf
+                                <button type="submit" class="dropdown-item"><i
+                                        class="bi bi-box-arrow-right"></i>Logout</button>
+                            </form>
+
+                        </li>
+                    </ul>
                 </li>
                 @else
                 <li>
