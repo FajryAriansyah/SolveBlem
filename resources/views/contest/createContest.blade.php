@@ -26,6 +26,8 @@
                 Password : <input name="password" type="text" placeholder="Password">
             </div>
         </div>
+        <input name="slug" type="hidden" value="">
+            <input name="user_id" type="hidden" value="{{ auth()->id() }}">
         <div class="contest">
             <button class="button-create">
                 <a href="{{url("/contest/create/problem")}}" class="btn-create">Create a contest</a>
