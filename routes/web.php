@@ -28,7 +28,7 @@ Route::get('solveblem/profiles/user', [SolveblemController::class, 'user']);
 // Route::get('solveblem/user/contest', [SolveblemController::class, 'contest']);
 
 Route::get('/', function () {
-    return view('solveblem/landing');
+    return view('solveblem.landing');
 });
 
 Route::get('solveblem', function () {
