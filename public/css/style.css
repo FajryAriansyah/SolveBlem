@@ -7,6 +7,7 @@
     --third-color: #FFE5B2;
     --enter-contest-color: #F7C873;
     --button-enter-color: #C5A05E;
+    --mulai-button-color: #29AA26;
     --button-color: #6E40C9;
     --border-contest-color: #B1B1B1;
     --rule-contest-color: #F3F3F3;
@@ -103,7 +104,7 @@ li{
     margin-top: 2rem;
     padding: .3em 1.3em;
     border-radius: 10px;
-    background-color: var(--mulai-btn-color);
+    background-color: var(--mulai-button-color);
     border: none;
 }
 
@@ -616,6 +617,82 @@ li{
     border: none;
     padding: .5rem;
     border-radius: 10px;
+}
+
+/* ===================== Halaman list ===================== */
+:root{
+    --bg-content:#F3E8E8;
+    --color-ac: #29aa26;
+    --card-color-second: #d4c29e;
+}
+
+.sidebar{
+    gap:10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content{
+    background-color: var(--bg-content);
+    box-shadow: 8px 4px 4px 0px rgba(0,0,0,0.25);
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: 2px solid var(--border-contest-color);
+    font-family: var(--text-font);
+}
+
+.main-content{
+    flex-grow: 1;
+    max-width: 865px;
+}
+.main-content .h2{
+    font-size: var(--title-size);
+    font-weight: var(--title-weight);
+}
+.side-content{
+    width:250px;
+}
+
+.content-card{
+    padding:10px 35px;
+    background-color: var(--first-color);
+    box-shadow: 8px 4px 4px 0px rgba(0,0,0,0.25);
+    border: 1px solid var(--border-contest-color);
+    border-radius: 10px;
+    margin:10px;
+}
+.content-card:hover{
+    background-color: var(--card-color-second);
+    cursor: pointer;
+}
+.progressBar{
+    color:grey;
+    width: 100%;
+}
+.progress{
+    color: var(--color-ac);
+    height:8px;
+    margin: 10px 0;
+}
+
+.side-content{
+    background-color: var(--bg-content);
+    box-shadow: 8px 4px 4px 0px rgba(0,0,0,0.25);
+    border-radius: 5px;
+    border: 2px solid var(--border-contest-color);
+    font-family: var(--text-font);
+}
+
+.category{
+    background-color: #F7C873;
+  
+}
+
+.category h1{
+    font-family: var(--text-font);
+    font-size: var(--title-size);
+    font-weight: var(--title-weight);
+    color: var(--text-color);
 }
 
 /*====================== footer =========================*/

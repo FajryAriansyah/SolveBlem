@@ -23,7 +23,7 @@ use App\Http\Controllers\SolveblemController;
 
 // Route::get('solveblem/profiles/user/submission-history', [SolveblemController::class, 'create']);
 
-// Route::get('solveblem/profiles/user', [SolveblemController::class, 'user']);
+Route::get('solveblem/profiles/user', [SolveblemController::class, 'user']);
 
 // Route::get('solveblem/user/contest', [SolveblemController::class, 'contest']);
 
