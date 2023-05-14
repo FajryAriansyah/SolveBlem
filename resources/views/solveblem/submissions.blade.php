@@ -1,8 +1,8 @@
-@extends ('layouts.navigation')
+@extends('layouts.main')
 
 @section('title', 'Solveblem | Submissions')
 
-@section('content')
+@section('container')
 <div class="container">
         <h1 class="submission-title">Submissions</h1>
         <div class="problem-submission">
@@ -22,7 +22,7 @@
 
         <div class="inner-wrap">
             <div class="table">
-                <table>
+                <table class="table-submission">
                     <thead>
                         <tr>
                             <th>ID</th>
@@ -232,5 +232,4 @@
                 </div>
             </div>
         </div>
-    @include('layouts.footer')
 @endsection

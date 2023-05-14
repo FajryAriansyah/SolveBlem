@@ -1,11 +1,11 @@
-@extends ('layouts.navigation')
+@extends('layouts.main')
 
 
 @section('title', 'Solveblem | User')
 
 
 
-@section('content')
+@section('container')
 @include('layouts.profile')
 
 <div class="wrap">
@@ -31,6 +31,4 @@
         </div>
     </div>
 </div>
-
-@include('layouts.footer')
 @endsection

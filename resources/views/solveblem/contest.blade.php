@@ -1,8 +1,8 @@
-@extends ('layouts.navigation')
+@extends('layouts.main')
 
 @section('title', 'Solveblem | Contest')
 
-@section('content')
+@section('container')
 
     <div class="container">
         <h1 class="title">Contest</h1>
@@ -103,6 +103,4 @@
             </div>
         </div>
     </div>
-
-    @include('layouts.footer')
     @endsection    

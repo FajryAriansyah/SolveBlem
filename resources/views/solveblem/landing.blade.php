@@ -1,27 +1,81 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SolveBlem</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solveblem</title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}">
 </head>
-<body >
-  <div class="text-white bg-zinc-800 h-screen flex flex-col items-center justify-center" style="font-family: 'Montserrat', sans-serif;">
-    
-      <span class="text-[36px] font-bold">Biarkan skillmu yang berbicara</span>
-      <br>
-      <input class="px-5 py-2 rounded text-center text-black" type="text" placeholder="Masukkan ID Contest" >
-      <br><span>ATAU</span><br>
-      <button class="bg-blue-800 px-5 py-2 rounded-lg border-1 border-black hover:bg-violet-600"
-              onclick="window.location='{{ url("create-contest") }}'">
-        Buat Contest
-      </button><br><br>
-      <p>SolveBlem membantu seluruh developer dunia untuk mengasah skill analisis dan problem solving mereka</p>
-  </div>
+
+<body>
+    <div class="black-container" style="background-color:#1A1A1B; clip-path: polygon(0 0, 100% 0, 100% 87%, 0% 100%);">
+        <header class="header container" id="header">
+            <nav class="nav">
+                <a href="#" class="nav_brand" id="white-color">
+                    Solveblem
+                </a>
+                <div class="nav_menu" id="nav-menu" style="z-index: 1000">
+                    <ul class="nav_list">
+                        <li class="nav_item">
+                            <a href="{{url("solveblem")}}" class="nav_link active-link" id="white-color">Home</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="{{url("/problem")}}" class="nav_link" id="white-color">Problem</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="{{url("/contest")}}" class="nav_link" id="white-color">Ranking</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link signup">Sign Up</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link login">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="content-landing container">
+            <h1 class="title-landing" style="color: white">
+                Biarkan skillmu yang berbicara
+            </h1>
+            <button class="btn-mulai">
+                <a href="{{ url('') }}" class="mulai-coding" style="color: white">Mulai Coding</a>
+            </button>
+            <div class="services-content" style="margin-top:3rem">
+                <div class="landing-left-content">
+                    <p style="color: white; margin-top:7rem; margin-bottom:1.5rem; padding-bottom:5rem">Membantu mengasah analisis dan problem solving mulai dari tahap pemula
+                        hingga mahir</p>
+                </div>
+                <div class="landing-right-content">
+                    <p style="color: white">Menyediakan lebih dari 300.000 soal untuk problem solving</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="services-content" style="margin-top: 1rem">
+            <div class="landing-left-content">
+                <p style="color: black; margin-top: 5rem;">Membantu pengajar membuat dan memeriksa soal otomatis dengan local contest</p>
+            </div>
+            <div class="landing-right-content">
+                <p style="color: black">Menyediakan local contest untuk siapa saja ingin berkompetisi lokal</p>
+                <p style="color: black; margin-top:7.3rem; margin-bottom: 1rem;">Tersebar keseluruh Indonesia dan bisa diakses di mana saja</p>
+            </div>
+        </div>
+    </div>
+   
+    <div class="black-container footer-landing py-1" style="background-color:#1A1A1B;  justify-content: center; clip-path: polygon(0 0, 100% 80%, 100% 100%, 0% 100%);">
+        <footer class="footer" style="padding-top:3rem;">
+            <p style="color: white; margin-top:.8rem">Copyright &copy; 2023 Solveblem</p>
+        </footer>
+    </div>
+  <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
 </body>
+
 </html>
+
+
