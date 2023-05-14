@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Contest;
 use Illuminate\Http\Request;
 
 class ContestController extends Controller
@@ -19,8 +20,19 @@ class ContestController extends Controller
     {
         return view('contest.createProblem');
     }
-    public function store()
+    public function store(Request $request)
     {
+
+        $validated = $request->validate([
+            'title' => 'required|max:255',
+            'user_id' => 'required',
+            'start_at' => 'required',
+            'duration' => 'required|',
+            'max_participant' => 'required',
+            'password' => 'required',
+        ]);
+
+        Contest::create[$validated];
 
         return redirect('contest/{}');
     }
