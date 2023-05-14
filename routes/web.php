@@ -19,7 +19,7 @@ use App\Http\Controllers\SolveblemController;
 */
 
 Route::get('/', function () {
-    return view('layouts.main');
+    return view('solveblem.landing');
 });
 
 // authentication
