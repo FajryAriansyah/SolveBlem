@@ -22,12 +22,14 @@ use App\Http\Controllers\ContestProblemController;
 */
 // Home
 Route::get('/', function () {return view('solveblem.landing');});
+
 // Authentication
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout',[LoginController::class, 'logout']);
 Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
+
 // Problem
 Route::get('/problem/create', [ProblemController::class, 'create']);
 Route::get('/problem', [ProblemController::class, 'showList']);
