@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\AnswerController;
 use App\Http\Controllers\ContestController;
 use App\Http\Controllers\ProblemController;
 use App\Http\Controllers\ProfileController;
@@ -32,6 +33,10 @@ Route::get('/problem/create', [ProblemController::class, 'create']);
 Route::get('/problem', [ProblemController::class, 'showList']);
 Route::get('/problem/{slug}', [ProblemController::class, 'index']);
 Route::post('/problem/create/store', [ProblemController::class, 'store']);
+
+//Problem Answer
+Route::post('problem/{problem:slug}/store',[AnswerController::class, 'store']);
+
 // Constest
 Route::get('/contest/{contest:slug}', [ContestController::class, 'show']);
 Route::post('/contest/store', [ContestController::class, 'store']);
