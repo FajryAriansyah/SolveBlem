@@ -11,9 +11,9 @@
 </head>
 
 <body>
-    <header class="header" id="header">
-        <nav class="nav container">
-            <a href="{{url(" solveblem")}}" class="nav_brand">
+    <header class="header container" id="header">
+        <nav class="nav">
+            <a href="{{url("solveblem")}}" class="nav_brand">
                 Solveblem
             </a>
             <div class="nav_menu" id="nav-menu">
@@ -28,7 +28,7 @@
                         <a href="{{url("/contest")}}" class="nav_link">Contest</a>
                     </li>
                     <li class="nav_item">
-                        <a href="#" class="nav_link">About</a>
+                        <a href="{{url("/about")}}" class="nav_link">About</a>
                     </li>
                     @auth
                     <li class="nav_item dropdown">
@@ -48,16 +48,15 @@
                                     <button type="submit" class="dropdown-item"><i
                                             class="bi bi-box-arrow-right"></i>Logout</button>
                                 </form>
-
                             </li>
                         </ul>
                     </li>
                     @else
                     <li class="nav_item">
-                        <a href="#" class="nav_link signup">Sign Up</a>
+                        <a href="{{url("/register")}}" class="nav_link signup-navbar">Sign Up</a>
                     </li>
                     <li class="nav_item">
-                        <a href="#" class="nav_link login">Login</a>
+                        <a href="{{url("/login")}}" class="nav_link login-navbar">Login</a>
                     </li>
                     @endauth
                 </ul>
