@@ -256,6 +256,9 @@ li{
     font-family: var(--text-font);
 }
 
+.t-problem:hover{
+    cursor:pointer
+}
 
 /*===================== Problems ==========================*/
 .container-center{
