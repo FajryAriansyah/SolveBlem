@@ -36,12 +36,15 @@ class SolveblemController extends Controller
     public function user_contest()
     {
         return view('solveblem.contest');
+
     }
     
     public function about()
     {
         return view('solveblem.about');
     }
+
+
 
 
     /**

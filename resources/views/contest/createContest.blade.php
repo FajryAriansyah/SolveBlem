@@ -1,5 +1,6 @@
 @extends('layouts.main')
 @section('container')
+
 <div class="container">
     <h1 class="title">Contest</h1>
 </div>
@@ -29,9 +30,10 @@
         <input name="slug" type="hidden" value="">
             <input name="user_id" type="hidden" value="{{ auth()->id() }}">
         <div class="contest">
-            <button class="button-create">
+            <button class="button-create type="submit">
                 <a href="{{url("/contest/create/problem")}}" class="btn-create">Create a contest</a>
             </button>
         </div>
+
     </div>
 @endsection

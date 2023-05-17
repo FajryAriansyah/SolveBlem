@@ -48,6 +48,7 @@ Route::post('/contest/store', [ContestController::class, 'store']);
 // About
 Route::get('/about', [SolveblemController::class, 'about']);
 // Route::get('/contest/{contest:slug}', [ContestController::class, 'show']);
+
 Route::get('/contest', [ContestController::class, 'index']);
 // Route::get('/contest/{contest:slug}/create/problem/create', [ContestController::class, 'problem']);
 

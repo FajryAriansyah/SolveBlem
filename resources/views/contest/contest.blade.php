@@ -5,6 +5,7 @@
     <h1 class="title">Contest</h1>
 </div>
 
+
 <div class="container container-contest">
     <div class="enter-contest">
         <div class="enter-contest-wrap">
@@ -21,6 +22,7 @@
             <button class="button-create">
                 <a href="{{url("/contest/create")}}" class="btn-create">Create a contest</a>
             </button>
+
         </div>
     </div>
 </div>
