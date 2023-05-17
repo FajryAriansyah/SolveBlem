@@ -7,22 +7,24 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
-    public function index(){
-        return view('login.index',[
+    public function index()
+    {
+        return view('login.index', [
             'title' => 'Login',
             'active' => 'login'
         ]);
     }
 
-    public function authenticate(Request $request){
+    public function authenticate(Request $request)
+    {
         $credentials = $request->validate([
             'email' => 'required|email:dns',
             'password' => 'required'
         ]);
 
-        if(Auth::attempt($credentials)){
+        if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            
+
             return redirect()->intended('/');
         }
 
@@ -30,7 +32,8 @@ class LoginController extends Controller
         // return back()->withErrors('') // akan masuk ke @error
     }
 
-    public function logout(){
+    public function logout()
+    {
         Auth::logout();
 
         request()->session()->invalidate();

@@ -1,62 +1,76 @@
-@extends('layouts.main')
+<!DOCTYPE html>
+<html lang="en">
 
-@section('container')
-    <div class="row justify-content-center">
-        <div class="col-lg-5 ">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solveblem</title>
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}">
+</head>
 
-            <main class="form-registration">
-                <h1 class="h3 mb-3 fw-normal text-center">Form Registrasi</h1>
-                <form action="/register" method="POST">
+<body>
+    <div class="registrasi-page">
+        <div class="registrasi">
+            <div class="content-card-login">
+                <h1 class="card-title-login">Registrasi</h1>
+                <form class="card-form" action="/register" method="POST">
                     @csrf
-                    <div class="form-floating">
-                        <input type="text" name="name"
-                            class="form-control rounded-top @error('name') is-invalid @enderror" id="name"
-                            placeholder="Name" required value="{{ old('name') }}">
-                        <label for="name">Name</label>
+                    <div class="card-form-group form-name">
+                        <label for="name"></label>
+                        <input class="my-input @error('name') is-invalid @enderror" type="text" id="name" name="email"
+                            placeholder="Name" autofocus required value="{{ old('name') }}">
                         @error('name')
-                            <div class="invalid-feedback">
-                                {{ $message }}
-                            </div>
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
                         @enderror
                     </div>
-                    <div class="form-floating">
-                        <input type="text" name="username" class="form-control @error('username') is-invalid @enderror"
-                            id="username" placeholder="Username" required value="{{ old('username') }}">
-                        <label for="username">Username</label>
+                    <div class="card-form-group form-username">
+                        <label for="username"></label>
+                        <input class="my-input @error('username') is-invalid @enderror" type="text" id="username"
+                            name="username" placeholder="Username" autofocus required value="{{ old('username') }}">
                         @error('username')
-                            <div class="invalid-feedback">
-                                {{ $message }}
-                            </div>
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
                         @enderror
                     </div>
-
-                    <div class="form-floating">
-                        <input type="email" name="email" class="form-control @error('email') is-invalid @enderror"
-                            id="email" placeholder="Email" required value="{{ old('email') }}">
-                        <label for="email">Email address</label>
+                    <div class="card-form-group form-email">
+                        <label for="email"></label>
+                        <input class="my-input @error('email') is-invalid @enderror" type="text" id="email" name="email"
+                            placeholder="Email" autofocus required value="{{ old('email') }}">
                         @error('email')
-                            <div class="invalid-feedback">S
-                                {{ $message }}
-                            </div>
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
                         @enderror
                     </div>
-                    <div class="form-floating">
-                        <input type="password" name="password"
-                            class="form-control @error('password') is-invalid @enderror rounded-bottom" id="password"
-                            placeholder="Password" required">
-                        <label for="password">Password</label>
+                    <div class="card-form-group form-password">
+                        <label for="password"></label>
+                        <input class="my-input @error('password') is-invalid @enderror" type="password" id="password"
+                            name="password" placeholder="Password" autofocus required value="{{ old('password') }}">
                         @error('password')
-                            <div class="invalid-feedback">
-                                {{ $message }}
-                            </div>
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
                         @enderror
                     </div>
-
-
-                    <button class="w-100 btn btn-lg btn-primary mt-3" type="submit">Register</button>
+                    <div class="card-button button-register">
+                        <button type="submit">Register</button>
+                    </div>
                 </form>
-                <small class="d-block text-center mt-4">Sudah registrasi? <a href="/login">Login sekarang!</a></small>
-            </main>
+            </div>
+            <div class="register">
+                <p class="text-register">Sudah registrasi? <a href="{{url ("/login")}}">Login sekarang!</a></p>
+            </div>
+        </div>
+        <div class="black-container-login">
+            <h1 class="solveblem-text">Solveblem</h1>
         </div>
     </div>
-@endsection
+    <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+</body>
+
+</html>
