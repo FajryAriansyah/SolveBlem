@@ -57,8 +57,6 @@ Route::post('/logout', [LoginController::class, 'logout']);
 Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
 
-
-
 // Problem
 
 Route::get('/problem/create', [ProblemController::class, 'create']);
@@ -71,4 +69,8 @@ Route::post('/problem/create/store', [ProblemController::class, 'store']);
 Route::get('/contest/create/problem', [ContestController::class, 'create_problem']);
 Route::get('/contest', [ContestController::class, 'index']);
 Route::get('/contest/create', [ContestController::class, 'create']);
+Route::get('/contest/participant', [ContestController::class, 'participantContest']);
 Route::post('/contest/store', [ContestController::class, 'store']);
+
+// About
+Route::get('/about', [SolveblemController::class, 'about']);

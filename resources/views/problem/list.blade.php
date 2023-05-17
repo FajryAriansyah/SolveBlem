@@ -21,7 +21,9 @@
             <div class="category">
                 <h1>Category</h1>
             </div>
-            <div class="inner-category"></div>
+            <div class="inner-category">
+                <a href="" class="inner-category-content">Bruteforce</a>
+            </div>
         </div>
     </div>
 </div>

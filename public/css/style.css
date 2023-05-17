@@ -14,7 +14,6 @@
     --text-color: #000000;
     --title-font: 'Patua One', cursive;
     --contest-font:'Montserrat', sans-serif;
-    --landing-font-title: 'Montserrat', sans-serif;
     --text-font: 'Poppins', sans-serif;
     --title-weight: 700;
     --text-weight: 400;
@@ -49,7 +48,6 @@ li{
 .nav_brand{
     text-decoration: none;
     font-family: var(--title-font);
-    font-weight: var(--title-weight);
     font-size: var(--brand-size);
     color: var(--text-color);
     margin-bottom: .6rem;
@@ -87,13 +85,13 @@ li{
 
 
 /* ============== Landing Page ================== */
-.signup{
+.signup-navbar{
     background-color: #F7C873;
     padding: .2rem .6rem;
     border-radius: 10px;
 }
 
-.login{
+.login-navbar{
     padding: .2rem 1rem;
     background-color: #6E40C9;
     color: white;
@@ -125,7 +123,7 @@ li{
 }
 
 .title-landing{
-    font-family: var(--landing-font-title);
+    font-family: var(--contest-font);
     font-size: 3.5rem;
     margin-top: 4.5rem;
 }
@@ -134,6 +132,25 @@ li{
     display: flex;
     justify-content: center;
     font-family: var(--text-font);
+}
+
+.service-content_one{
+    color: white; 
+    margin-top:7rem; 
+    padding-bottom:5rem; 
+}
+
+.landing-left-content {
+    position: relative;
+}
+
+.landing-left-content-two::after {
+    content: "";
+    position: absolute;
+    top: -37px;
+    right: -.8px;
+    height: 320px; /* Atur tinggi garis sejajar dengan tinggi elemen */
+    border-right: 1px solid black;
 }
 
 .landing-left-content, .landing-right-content{
@@ -302,9 +319,10 @@ li{
 .form-contest .inputForm-contest{
     background-color: #fff;
     width: 100%;
-    padding: 2px 5px;
+    padding: 3px 8px;
     border-radius: 10px;
     margin-top: .8rem;
+    border: 1px solid black;
 }
 
 .form-contest .inputForm-contest input{
@@ -449,16 +467,6 @@ li{
 }
 
 /* ========================= Contest Page===================== */
-.global-contest{
-    justify-content: space-between;
-}
-
-.contest-title{
-    margin-top: 2.3rem;
-    font-family: var(--contest-font);
-    font-size: 2rem;
-}
-
 .table-header{
     padding: .7rem 3rem;
     background-color: var(--first-color);
@@ -474,8 +482,9 @@ li{
     font-size: 0.75rem;
     width: 92px;
     border-radius: 0.313rem;
-    padding: .3rem 0;
+    padding: .5rem 0;
     box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.25);
+    font-family: var(--text-font);
 }
 
 .table-row:nth-child(odd) {
@@ -494,14 +503,19 @@ li{
     border-bottom: none;
 }
 
+.container-contest{
+    display: flex;
+justify-content: center;
+}
+
 .enter-contest{
     margin: 2.5rem 0 3rem 0;
-    padding: .8rem 3rem;
+    padding: 1rem 3rem 2.5rem;
     background-color: var(--first-color);
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 1rem;
     text-align: center;
-    max-height: 330px;
+    justify-content: center;
 }
 
 .enter-contest-wrap{
@@ -514,6 +528,10 @@ li{
     border: none;
     padding: .3rem 1rem;
     border-radius: 2.313rem;
+}
+
+.button-create{
+    margin-top: 0;
 }
 
 .btn-enter, .btn-create{
@@ -619,6 +637,50 @@ li{
     border-radius: 10px;
 }
 
+/* ===================== Participant Contest ================= */
+.participant-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.participant-contest{
+    background-color: var(--second-color);
+    margin-bottom: 3rem;
+    padding: 1rem;
+    border-radius: 10px;
+    font-family: var(--text-font);
+    box-shadow: 4px 4px 4px 0px rgba(0,0,0,0.25);
+}
+
+.participant-data{
+    border-bottom: 1px solid black;
+    margin-bottom: 0;
+}
+
+.table-data-participant{
+    font-weight: var(--title-weight);
+    color: #F8F8F8;
+    padding: .4em 1.2em;
+    border-radius: 5px;
+}
+
+.ac{
+    background-color: #29AA26;
+}
+
+.wa{
+    background-color: #FF0A0A;
+}
+
+.rte{
+    background-color: #FF5C00;
+}
+
+.duration-participant{
+    color: black;
+}
 /* ===================== Halaman list ===================== */
 :root{
     --bg-content:#F3E8E8;
@@ -678,14 +740,16 @@ li{
 .side-content{
     background-color: var(--bg-content);
     box-shadow: 8px 4px 4px 0px rgba(0,0,0,0.25);
-    border-radius: 5px;
-    border: 2px solid var(--border-contest-color);
+    border-radius: 20px;
     font-family: var(--text-font);
 }
 
 .category{
     background-color: #F7C873;
-  
+    padding: .5rem;
+    border: 2px solid var(--border-contest-color);
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
 }
 
 .category h1{
@@ -693,6 +757,186 @@ li{
     font-size: var(--title-size);
     font-weight: var(--title-weight);
     color: var(--text-color);
+    font-size: 1.5rem;
+    margin-left: .8rem;
+}
+
+.inner-category{
+    background-color: var(--second-color);
+    padding: .3rem 0 1.4rem 0;
+    border: 2px solid var(--border-contest-color);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.inner-category-content{
+    text-decoration: none;
+    color: var(--text-color);
+    margin-left: 1.8rem;
+}
+
+.inner-category-content {
+    display: inline-block;
+    border-bottom: 2px solid #C7C7C7; /* Atur ketebalan dan warna garis */
+    padding-right: 6rem; /* Atur jarak antara teks dan garis */
+}
+
+.inner-category-content:hover{
+    color: var(--text-color);
+    opacity: .6;
+}
+
+/* ==================== About ============================ */
+.about-containt{
+    color: white;
+}
+
+.about-black-container{
+    background-color:#1A1A1B; 
+    clip-path: polygon(0 0, 100% 0, 100% 79%, 0 100%);
+
+    padding-bottom: 3rem;
+}
+
+
+/* ==================== Login ============================ */
+.login-page, .registrasi-page{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .card-img{
+      height: 800px;
+  }
+  
+  .login, .registrasi {
+      position: relative;
+      align-self: center;
+      text-align: center;
+      margin: auto 3rem;
+      background: white;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+      height: 430px;
+      width: 350px;
+      border-radius: 5%;
+  }
+  
+  .content-card-login{
+      display: flex;
+      flex-direction: column;
+      margin-top: 1rem;
+      border-radius: 7%;
+  }
+  
+  .card-title-login{
+      text-align: center;
+      font-family: var(--title-font);
+      font-size: 2.8125rem;
+      border-radius: 7%;
+  }
+  
+  .form-{
+      margin: 1.5rem 0 1.3rem 0;
+      border-radius: 7%;
+  }
+  
+  .my-input{
+      font-family: var(--text-font);
+  }
+  
+  .my-input::placeholder{
+      color: #C7C7C7;
+  }
+  
+  .card-form-group:nth-child(1){
+      margin-top: 1.5rem;
+  }
+  
+  .card-form-group{
+      margin: .7rem 0;
+  }
+  
+  .card-form-group input[type="text"],
+  .card-form-group input[type="password"] {
+      width: 75%;
+      padding: .5rem .4rem;
+      border: 2px solid #DDDDDD;
+      border-radius: 6px;
+      font-size: 16px;
+      align-items: center;
+      cursor:pointer;
+  }
+  
+  
+  .card-button button {
+      margin-top: 1.4rem;
+      padding: .5rem .3rem;
+      width: 75%;
+      background: #29AA26;
+      color: #fff;
+      font-size: 1.2rem;
+      border-radius: 10px;
+      font-family: var(--text-font);
+      border: none;
+      cursor: pointer;
+  }
+  
+  .card-button button:hover{
+      opacity: .7;
+  }
+  
+  .register{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #E8F3F2;
+      padding: .7rem 0;
+      font-family: var(--text-font);
+      color: #999999;
+      font-size: var(--text-size);
+      border-radius: 7%;
+  }
+  
+  .text-register{
+      margin: auto;
+      font-size: 1rem;
+  }
+  
+  .text-register a {
+      color: #29AA26;
+      text-decoration: none;
+      font-weight: 500;
+  }
+  
+  .text-register a:hover {
+      color: #29AA26;
+      opacity: .7;
+  }
+  
+  .black-container-login {
+      position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    clip-path: polygon(34% 0, 100% 0, 99% 100%, 0 100%);
+    width: 60%;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+  
+  .solveblem-text{
+      font-family: 'Patua One', cursive;
+      font-size: 5rem;
+      margin-left: 4rem;
+  }
+
+  .button-register button {
+    margin-top: .7rem;
 }
 
 /*====================== footer =========================*/

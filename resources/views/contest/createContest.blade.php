@@ -4,7 +4,7 @@
     <h1 class="title">Contest</h1>
 </div>
 <div class="container">
-    <div class="contest-content">
+    <div class="contest-content mt-3">
         <div class="form-contest" action="/contest/create" method="POST">
             <div class="inputForm-contest">
                 Contest Name : <input name="title" type="text" placeholder="Contest Name">
