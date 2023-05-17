@@ -12,7 +12,7 @@ class Contest extends Model
     protected $guarded = ['id'];
     
     public function problem(){
-        return $this->belongsToMany(Problem::class)->withTimestamps();
+        return $this->belongsToMany(Problem::class, 'contest_problem')->withTimestamps();
     }
 
 }

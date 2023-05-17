@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('judul');
             $table->string('slug');
-            $table->foreignId('author')->nullable();
+            $table->foreignId('user_id');
             $table->string('batas_waktu');
             $table->string('batas_memori');
             $table->text('deskripsi');

@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Contest;
+use App\Models\Problem;
 use Illuminate\Http\Request;
+use App\Models\ContestProblem;
 use Illuminate\Support\Facades\Hash;
 
 class ContestController extends Controller
@@ -43,14 +45,29 @@ class ContestController extends Controller
     }
 
     public function problem(Contest $contest){
+        $problems = Problem::with('contest')
+                    ->whereHas('contest', function ($query) use($contest){
+                        $query->where('contest_id',$contest->id);
+                    })->get();
+        
+        // $problems = $problems->contestProblems($contest->id)->get();
 
-        // $problems = ContestProblem::
-        return view('contest.createProblem', compact('problems'));
+        // $contestProblem = ContestProblem::where('contest_id',$contest->id)->get();
+        // $contestProblem = $problems->$contest->where('contest_id',$contest->id)->get();
+
+        // dd($problems);
+        return view('contest.createProblem', compact('problems','contest'));
     }
     public function problemStore(){
         return redirect('/contest');
     }
-    public function show(){
-        //
+    public function show(Contest $contest){
+
+        $problems = Problem::with('contest')
+                    ->whereHas('contest', function($query) use($contest) {
+                        $query->where('contest_id', $contest->id);
+                    })->get();
+
+        return view('contest.contest_landing', compact('contest','problems'));
     }
 }
