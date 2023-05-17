@@ -4,8 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ContestController;
 use App\Http\Controllers\ProblemController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SolveblemController;
+use App\Http\Controllers\ContestProblemController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,9 +33,17 @@ Route::get('/problem', [ProblemController::class, 'showList']);
 Route::get('/problem/{slug}', [ProblemController::class, 'index']);
 Route::post('/problem/create/store', [ProblemController::class, 'store']);
 // Constest
-Route::get('/contest/{contest:slug}/create/problem', [ContestController::class, 'problem']);
-Route::get('/contest', [ContestController::class, 'index']);
+Route::get('/contest/{contest:slug}', [ContestController::class, 'show']);
 Route::post('/contest/store', [ContestController::class, 'store']);
+Route::get('/contest/{contest:slug}/create/problem', [ContestController::class, 'problem']);
 Route::get('/contest/create', [ContestController::class, 'create']);
-// Route::get('/contest/{contest:slug}', [ContestController::class, 'show']);
+Route::get('/contest', [ContestController::class, 'index']);
 // Route::get('/contest/{contest:slug}/create/problem/create', [ContestController::class, 'problem']);
+
+// Contest : Create Problem
+Route::get('/contest/{Cslug}/{Pslug}', [ContestProblemController::class, 'show']);
+Route::get('/contest/{contest:slug}/create/problem/create', [ContestProblemController::class, 'index']);
+Route::post('/contest/{contest:slug}/create/problem/store', [ContestProblemController::class, 'store']);
+
+// User
+Route::get('/profiles/{user:username}', [ProfileController::class, 'index']);

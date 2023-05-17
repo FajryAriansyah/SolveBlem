@@ -28,14 +28,22 @@
                     </thead>
                     <tbody>
                         
-                        {{-- <tr class="table-row">
+                        <tr class="table-row">
                             <td class="table-data">Infust Contest</td>
                             <td class="table-data">Fajry Ariansyah Habil Nasution</td>
                             <td class="table-data">18/Maret /2023
                                 19:05 UTC+7</td>
                             <td class="table-data">02:00</td>
                             <td class="table-data">Open Register in 2 Days</td>
-                        </tr> --}}
+                        </tr>
+                        <tr class="table-row">
+                            <td class="table-data">Infust Contest</td>
+                            <td class="table-data">Fajry Ariansyah Habil Nasution</td>
+                            <td class="table-data">18/Maret /2023
+                                19:05 UTC+7</td>
+                            <td class="table-data">02:00</td>
+                            <td class="table-data">Open Register in 2 Days</td>
+                        </tr>
                         
                     </tbody>
                 </table>

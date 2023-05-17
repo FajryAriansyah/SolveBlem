@@ -12,9 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('contest_problem', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('contest_id');
-            $table->foreignId('problem_id');
+            $table->unsignedBigInteger('contest_id');
+            $table->unsignedBigInteger('problem_id');
+
+            $table->foreign('contest_id')->references('id')->on('contests')->onDelete('cascade'); // akan dihapus begitu problemnya dihapus
+            $table->foreign('problem_id')->references('id')->on('problem')->onDelete('cascade'); // akan dihapus begitu problemnya dihapus
+      
             $table->timestamps();
         });
     }

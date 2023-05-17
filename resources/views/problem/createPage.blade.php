@@ -4,7 +4,7 @@
 <div class="mx-40">
     <h1 class="font-bold text-[36px]">Create Contest</h1>
     <div class="container mx-auto px-6 mt-10 rounded-3xl py-5 mb-10 drop-shadow-2xl" style="font-family: 'Montserrat', sans-serif;background-color: #F7C873;">
-        <form class="w-full px-20" action="/problem/create/store" method="POST">
+        <form class="w-full px-20" action="{{ isset($fromContest) ? url('contest/'. $contest->slug .'/create/problem/store') : url('problem/create/store') }}" method="POST">
             @csrf
             <br><span class="font-bold">Deskripsi Soal</span>
             <input class="border-2 border-black rounded-lg px-5 mt-3" type="text" name="Judul" style="width:100%;" placeholder="Judul"><br>

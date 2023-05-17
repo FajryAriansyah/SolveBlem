@@ -10,7 +10,7 @@
 
 <div class="wrap">
         <div class="titles">
-            <h1>Profile</h1>
+            <h1>Profile {{ $user->username }}</h1>
         </div>
         <div class="inner-wrap rows balance">
             <div class="user-profile">
@@ -18,8 +18,8 @@
                 <p class="text-user">User</p>
             </div>
             <div class="user-bio">
-                <p>Nama </p>
-                <p>Rating </p>
+                <p>Nama &ensp;: {{ $user->name }}</p>
+                <p>Rating &ensp;: 0</p>
             </div>
         </div>
         <div class="titles">
