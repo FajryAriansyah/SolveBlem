@@ -21,7 +21,7 @@ Website ini difokuskan sebagai wadah tempat membuat kontes compepetitive-program
 Website ini masih menggunakan compiler lokal, sehingga untuk menggunakannya perlu tersedianya compiler lokal di perangkat masing-masing. Semoga kedepannya akan semakin baik
 
 Untuk sementara ini, projek hanya mendukung bahasa C dan C++.
-  
+
 ## About Project
 
 Project ini dibuat sebagai project akhir mata kuliah Pemrograman Berbasis Web. Dikerjakan selama kurang lebih 1 bulan penuh. Masih banyak kekurangan di dalam web ini, akan tetapi kami belajar banyak tentang pemrograman, dan pengalaman berkolaborasi. Semoga kedepannya dapat dilanjutkan dan akan semakin baik
@@ -30,7 +30,7 @@ Project ini dibuat sebagai project akhir mata kuliah Pemrograman Berbasis Web. D
 
 Untuk mengontak kami dapat di **[instagram](https://www.instagram.com/ry___rian/)**
 
-## License
-Solveblem team:
-**[Fajry Ariansyah](https://www.instagram.com/ry___rian/)**
+## Developer
+Team:
+**[Fajry Ariansyah](https://www.instagram.com/ry___rian/)**,
 **[Habil Nasution](https://www.instagram.com/ry___rian/)**
