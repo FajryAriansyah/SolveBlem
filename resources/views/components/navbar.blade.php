@@ -101,16 +101,16 @@
                         </div>
                     </li>
                 @else
+                <li class="nav_item">
                     <li class="nav_item">
-                        <a class="btn btn-success" style="border-radius:20px" href="/login">
-                            Login
-                        </a>
-                    </li>
-                    <li class="nav_item">
-                        <a class="btn btn-primary" style="border-radius:20px" href="/register">
+                        <a class="nav_link signup-navbar me-3"  href="/register">
                             Register
                         </a>
                     </li>
+                    <a class="nav_link login-navbar"  href="/login">
+                        Login
+                    </a>
+                </li>
                 @endauth
             </ul>
         </div>

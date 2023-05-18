@@ -8,6 +8,7 @@
     <title>Solveblem | About</title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}">
+    <link rel="shortcut icon" href="{{ asset('images/Solveblem.png') }}" type="image/x-icon">
 </head>
 
 <body>
@@ -81,12 +82,9 @@
                 AC (Accepted),
                 <br>
                 WA (Wrong Answer),
-                <br>
-                TLE (Time limit Exceed),
-                <br>
+                <br>a {
                 RTE (Runtime Error)
                 <br>
-                CTE (Compile time Error) </p>
             <p>Website ini berisi soal-soal codingan dengan bahasa indonesia. Bahasa yang dipakai bisa C, C++ dan Java.
             </p>
             <p>Salah satu fitur yang ditawarkan adalah membuat grup dan soal sendiri. seorang pengajar dapat membuat
