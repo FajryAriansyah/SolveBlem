@@ -50,7 +50,11 @@
                     Submit
                 </div>
                 <div class="wrapper">
+                    @if(isset($contest))
                     <form action="{{ url('/contest/' . $contest->slug.'/'.$problem->slug . '/store') }}" method="POST" enctype="multipart/form-data">
+                        @else
+                        <form action="{{ url('/contest/'.$problem->slug . '/store') }}" method="POST" enctype="multipart/form-data">
+                    @endif
                         <span id="bahasa">Language</span>
                         &emsp;&emsp;
                         <select class="border border-2 mb-3" name="lang" id="">

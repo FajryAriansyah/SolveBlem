@@ -78,7 +78,7 @@
                                         <span class="table-data-participant ac">AC</span>
                                     </td>
                                 @elseif ($nilai == 0)
-                                    $user->contestParticipant
+                                    
                                     <td class="table-data">
                                         <span class="table-data-participant wa">WA</span>
                                     </td>

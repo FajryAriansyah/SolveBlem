@@ -59,6 +59,67 @@ class DatabaseSeeder extends Seeder
             'case_input' => '6 4',
             'case_output' => '10<br>2<br>24<br>1<br>2',
         ]);
+        Problem::create([
+            'judul' => 'Mengambil Gajah',
+            'slug' => 'mengambil-gajah',
+            'user_id' => 1,
+            'batas_waktu' => '2 s',
+            'batas_memori' => '64 MB',
+            'deskripsi' => "Pak Dengklek memutuskan sekolah lagi. Dia baru saja mendapat PR dari guru matematikanya. Sayangnya Pak Dengklek sudah terlalu lelah, dia sudah tak sanggup lagi. Pak Dengklek melihat potensi Anda yang begitu besar. Maka dari itu, kali ini dia minta bantuan Anda untuk menyelesaikan PR-nya. <br><br>
+            Buatlah sebuah program yang membaca dua buah bilangan bulat X dan Y. X dan Y dijamin bukan nol. Tuliskan hasil penjumlahan, pengurangan, perkalian, bagian bulat pembagian dan sisanya.",
+            'format_input' => "Sebuah baris yang berisi dua buah bilangan bulat, X dan Y.",
+            'format_output' => "Lima buah baris, yakni :<br>
+                Baris pertama berisi hasil penjumlahan, yakni X + Y<br>
+                Baris kedua berisi hasil pengurangan, yakni X - Y<br>
+                Baris ketiga berisi hasil perkalian, yakni X * Y<br>
+                Baris keempat berisi bagian bulat hasil pembagian, yakni bagian bulat dari X / Y<br>
+                Baris terakhir berisi X mod Y, yakni sisa pembagian dari X / Y</p>",
+            'contoh_input' => '6 4',
+            'contoh_output' => '10<br>2<br>24<br>1<br>2',
+            'case_input' => '6 4',
+            'case_output' => '10<br>2<br>24<br>1<br>2',
+        ]);
+        Problem::create([
+            'judul' => 'Mencari Lompatan',
+            'slug' => 'mencari-lompatan',
+            'user_id' => 1,
+            'batas_waktu' => '2 s',
+            'batas_memori' => '64 MB',
+            'deskripsi' => "Pak Dengklek memutuskan sekolah lagi. Dia baru saja mendapat PR dari guru matematikanya. Sayangnya Pak Dengklek sudah terlalu lelah, dia sudah tak sanggup lagi. Pak Dengklek melihat potensi Anda yang begitu besar. Maka dari itu, kali ini dia minta bantuan Anda untuk menyelesaikan PR-nya. <br><br>
+            Buatlah sebuah program yang membaca dua buah bilangan bulat X dan Y. X dan Y dijamin bukan nol. Tuliskan hasil penjumlahan, pengurangan, perkalian, bagian bulat pembagian dan sisanya.",
+            'format_input' => "Sebuah baris yang berisi dua buah bilangan bulat, X dan Y.",
+            'format_output' => "Lima buah baris, yakni :<br>
+                Baris pertama berisi hasil penjumlahan, yakni X + Y<br>
+                Baris kedua berisi hasil pengurangan, yakni X - Y<br>
+                Baris ketiga berisi hasil perkalian, yakni X * Y<br>
+                Baris keempat berisi bagian bulat hasil pembagian, yakni bagian bulat dari X / Y<br>
+                Baris terakhir berisi X mod Y, yakni sisa pembagian dari X / Y</p>",
+            'contoh_input' => '6 4',
+            'contoh_output' => '10<br>2<br>24<br>1<br>2',
+            'case_input' => '6 4',
+            'case_output' => '10<br>2<br>24<br>1<br>2',
+        ]);
+        Problem::create([
+            'judul' => 'Waterfall',
+            'slug' => 'waterfall',
+            'user_id' => 1,
+            'batas_waktu' => '2 s',
+            'batas_memori' => '64 MB',
+            'deskripsi' => "Pak Dengklek memutuskan sekolah lagi. Dia baru saja mendapat PR dari guru matematikanya. Sayangnya Pak Dengklek sudah terlalu lelah, dia sudah tak sanggup lagi. Pak Dengklek melihat potensi Anda yang begitu besar. Maka dari itu, kali ini dia minta bantuan Anda untuk menyelesaikan PR-nya. <br><br>
+            Buatlah sebuah program yang membaca dua buah bilangan bulat X dan Y. X dan Y dijamin bukan nol. Tuliskan hasil penjumlahan, pengurangan, perkalian, bagian bulat pembagian dan sisanya.",
+            'format_input' => "Sebuah baris yang berisi dua buah bilangan bulat, X dan Y.",
+            'format_output' => "Lima buah baris, yakni :<br>
+                Baris pertama berisi hasil penjumlahan, yakni X + Y<br>
+                Baris kedua berisi hasil pengurangan, yakni X - Y<br>
+                Baris ketiga berisi hasil perkalian, yakni X * Y<br>
+                Baris keempat berisi bagian bulat hasil pembagian, yakni bagian bulat dari X / Y<br>
+                Baris terakhir berisi X mod Y, yakni sisa pembagian dari X / Y</p>",
+            'contoh_input' => '6 4',
+            'contoh_output' => '10<br>2<br>24<br>1<br>2',
+            'case_input' => '6 4',
+            'case_output' => '10<br>2<br>24<br>1<br>2',
+        ]);
+       
 
         User::create([
             'name' => 'Fajry',
