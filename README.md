@@ -1,4 +1,4 @@
-<p align="center"><a href="https://Solveblem.com" target="_blank"><img src="images/Solveblem.png" width="400" alt="SolveBlem"></a></p>
+<p align="center"><a href="https://Solveblem.com" target="_blank"><img src="public/images/Solveblem.png" width="400" alt="SolveBlem"></a></p>
 
 
 ## About Solveblem
