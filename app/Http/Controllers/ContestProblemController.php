@@ -52,4 +52,24 @@ class ContestProblemController extends Controller
         return view('problem.index',compact('contest','problem'));
     }
 
+    public function problem(Contest $contest){
+        $posts = Problem::all();
+
+        session()->put('select', true);
+        return view('problem.list', compact('posts', 'contest'))->with('select');
+    }
+
+    public function storeProblem($cSlug, $pSlug){
+        $contest = Contest::where('slug', $cSlug)->firstOrFail();
+        $problem = Problem::where('slug', $pSlug)->firstOrFail();
+
+        DB::table('contest_problem')->insert([
+            'contest_id' => $contest->id,
+            'problem_id' => $problem->id,
+        ]);
+        
+        return redirect('/contest/'.$contest->slug.'/create/problem');
+
+    }
+
 }

@@ -15,11 +15,11 @@ class Problem extends Model
 
 
     public function user(){
-        return $this->belongsTO(User::class);
+        return $this->belongsTo(User::class);
     }
 
-    public function answer(){
-        return $this->belongsToMany(User::class)
+    public function userAnswer(){
+        return $this->belongsToMany(User::class, 'contest_problem_user')->withPivot(['answer'])
             ->withTimestamps();
     }
     public function contest(){

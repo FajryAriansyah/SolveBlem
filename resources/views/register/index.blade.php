@@ -19,7 +19,7 @@
                     @csrf
                     <div class="card-form-group form-name">
                         <label for="name"></label>
-                        <input class="my-input @error('name') is-invalid @enderror" type="text" id="name" name="email"
+                        <input class="my-input @error('name') is-invalid @enderror" type="text" id="name" name="name"
                             placeholder="Name" autofocus required value="{{ old('name') }}">
                         @error('name')
                         <div class="invalid-feedback">

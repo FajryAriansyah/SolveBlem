@@ -50,7 +50,7 @@
                     Submit
                 </div>
                 <div class="wrapper">
-                    <form action="{{ url('problem/' . $problem->slug . '/store') }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ url('/contest/' . $contest->slug.'/'.$problem->slug . '/store') }}" method="POST" enctype="multipart/form-data">
                         <span id="bahasa">Language</span>
                         &emsp;&emsp;
                         <select class="border border-2 mb-3" name="lang" id="">

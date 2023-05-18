@@ -7,40 +7,15 @@
     <title>@yield('title')</title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}">
+    {{-- icons --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 <body>
-    <header class="header" id="header">
-        <nav class="nav container">
-            <a href="#" class="nav_brand">
-                Solveblem
-            </a>
-            <div class="nav_menu" id="nav-menu">
-                <ul class="nav_list">
-                    <li class="nav_item">
-                        <a href="#" class="nav_link active-link">Home</a>
-                    </li>
-                    <li class="nav_item">
-                        <a href="#" class="nav_link">Problem</a>
-                    </li>
-                    <li class="nav_item">
-                        <a href="#" class="nav_link">Ranking</a>
-                    </li>
-                    <li class="nav_item">
-                        <a href="#" class="nav_link">Contest</a>
-                    </li>
-                    <li class="nav_item">
-                        <a href="#" class="nav_link">About</a>
-                    </li>
-                    <li class="nav_item">
-                        <a href="#" class="nav_link">
-                            <img src="{{ asset('images/profile_solveblem.png') }}" alt="arrow_left">
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    @yield('content')
+    <div class="black-container" style="background-color:#1A1A1B; clip-path: polygon(0 0, 100% 0, 100% 87%, 0% 100%);">
+    @include('components.navbar')
+    @yield('container')
+    @include('components.footer')
+
 <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
 </body>
 </html>

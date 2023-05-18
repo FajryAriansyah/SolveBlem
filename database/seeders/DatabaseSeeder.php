@@ -72,25 +72,109 @@ class DatabaseSeeder extends Seeder
             'email' => 'habil@mhs.unsyiah.ac.id',
             'password' => Hash::make('habil'),
         ]);
+        User::create([
+            'name' => 'Ariansyah',
+            'username' => 'Noitusanx2',
+            'email' => 'habil2@mhs.unsyiah.ac.id',
+            'password' => Hash::make('ariansyah'),
+        ]);
 
         DB::table('contests')->insert([
+            'id' => 111111,
             'title' => 'latihan pemrograman',
             'slug' => 'lat-p',
-            'user_id' => 1,
+            'user_id' => 2,
             'start_at' => Carbon::now()->toDateTimeString(),
             'duration' => 60,
             'max_participant' => 60,
-            'password' => Hash::make('latihan'),
+            'password' => 'fajry',
+        ]);
+        DB::table('contests')->insert([
+            'id' => 222222,
+            'title' => 'latihan pemrograman2',
+            'slug' => 'lat-p2',
+            'user_id' => 3,
+            'start_at' => Carbon::now()->toDateTimeString(),
+            'duration' => 60,
+            'max_participant' => 60,
+            'password' => 'fajry',
         ]);
 
         DB::table('contest_problem')->insert([
-            'contest_id' => 1,
+            'contest_id' => 111111,
             'problem_id' => 1,
+        ]);
+        DB::table('contest_problem')->insert([
+            'contest_id' => 222222,
+            'problem_id' => 1,
+        ]);
+        DB::table('contest_problem')->insert([
+            'contest_id' => 111111,
+            'problem_id' => 2,
+        ]);
+        DB::table('contest_problem')->insert([
+            'contest_id' => 222222,
+            'problem_id' => 2,
         ]);
 
         // DB::table('contest_problem')->insert([
         //     'contest_id' => 1,
         //     'problem_id' => 2,
         // ]);
+
+        DB::table('contest_user')->insert([
+            'contest_id' => 111111,
+            'user_id' => 1,
+            'nilai' => 0,
+        ]);
+        DB::table('contest_user')->insert([
+            'contest_id' => 111111,
+            'user_id' => 3,
+            'nilai' => 0,
+        ]);
+        DB::table('contest_user')->insert([
+            'contest_id' => 222222,
+            'user_id' => 1,
+            'nilai' => 0,
+        ]);
+        DB::table('contest_user')->insert([
+            'contest_id' => 222222,
+            'user_id' => 2,
+            'nilai' => 0,
+        ]);
+        
+        // tambahan
+        // DB::table('contest_problem_user')->insert([
+        //     'contest_id' => 111111,
+        //     'user_id' => 3,
+        //     'problem_id' => 1,
+        //     'answer' => 100
+        // ]);
+        // DB::table('contest_problem_user')->insert([
+        //     'contest_id' => 111111,
+        //     'user_id' => 3,
+        //     'problem_id' => 2,
+        //     'answer' => 200
+        // ]);
+        // DB::table('contest_problem_user')->insert([
+        //     'contest_id' => 111111,
+        //     'user_id' => 1,
+        //     'problem_id' => 2,
+        //     'answer' => 100
+        // ]);
+        // DB::table('contest_problem_user')->insert([
+        //     'contest_id' => 222222,
+        //     'user_id' => 2,
+        //     'problem_id' => 1,
+        //     'answer' => 100
+        // ]);
+        // DB::table('contest_problem_user')->insert([
+        //     'contest_id' => 222222,
+        //     'user_id' => 1,
+        //     'problem_id' => 2,
+        //     'answer' => 100
+        // ]);
+        
+
     }
 }

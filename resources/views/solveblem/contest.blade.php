@@ -1,4 +1,4 @@
-@extends ('layouts.navigation')
+@extends ('layouts.main')
 
 @section('title', 'Solveblem | Contest')
 

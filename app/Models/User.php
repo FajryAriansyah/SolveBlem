@@ -3,6 +3,7 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use App\Models\Contest;
 use App\Models\Problem;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
@@ -48,7 +49,18 @@ class User extends Authenticatable
             return $this->hasMany(Problem::class);
         }
 
-        public function answer(){
-            return $this->belongsToMany(Problem::class);
+        public function answerContest(){
+            return $this->belongsToMany(Contest::class, 'contest_problem_user')->withPivot(['answer']);
         }
+        public function answerProblem(){
+            return $this->belongsToMany(Problem::class, 'contest_problem_user')->withPivot(['answer']);
+        }
+
+        public function contest(){
+            return $this->belongsTo(Contest::class);
+        }
+        public function contestParticipant(){
+            return $this->belongsToMany(Contest::class, 'contest_user')->withPivot(['nilai']);
+        }
+
 }

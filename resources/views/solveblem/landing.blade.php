@@ -1,46 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solveblem</title>
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}">
-</head>
-
-<body>
+@extends('layouts.navigation')
+@section('container')
     <div class="black-container" style="background-color:#1A1A1B; clip-path: polygon(0 0, 100% 0, 100% 87%, 0% 100%);">
-        <header class="header container" id="header">
-            <nav class="nav">
-                <a href="{{url("solveblem")}}" class="nav_brand" id="white-color">
-                    Solveblem
-                </a>
-                <div class="nav_menu" id="nav-menu" style="z-index: 1000">
-                    <ul class="nav_list">
-                        <li class="nav_item">
-                            <a href="{{url("/")}}" class="nav_link active-link" id="white-color">Home</a>
-                        </li>
-                        <li class="nav_item">
-                            <a href="{{url("/problem")}}" class="nav_link" id="white-color">Problem</a>
-                        </li>
-                        <li class="nav_item">
-                            <a href="{{url("/contest")}}" class="nav_link" id="white-color">Contest</a>
-                        </li>
-                        <li class="nav_item">
-                            <a href="{{url("/about")}}" class="nav_link" id="white-color">About</a>
-                        </li>
-                        <li class="nav_item">
-                            <a href="{{url("/register")}}" class="nav_link signup-navbar">Sign Up</a>
-                        </li>
-                        <li class="nav_item">
-                            <a href="{{url("/login")}}" class="nav_link login-navbar">Login</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
+        
         <div class="content-landing container">
             <h1 class="title-landing" style="color: white">
                 Biarkan skillmu yang berbicara
@@ -62,22 +23,15 @@
     <div class="container">
         <div class="services-content">
             <div class="landing-left-content landing-left-content-two">
-                <p style="color: black; margin-top: 5rem;">Membantu pengajar membuat dan memeriksa soal otomatis dengan local contest</p>
+                
+                <p style="color: white; margin-top: 5rem;">Membantu pengajar membuat dan memeriksa soal otomatis dengan local contest</p>
             </div>
             <div class="landing-right-content">
-                <p style="color: black; padding-left: 1.5rem;">Menyediakan local contest untuk siapa saja ingin berkompetisi lokal</p>
-                <p style="color: black; margin-top:7.3rem; margin-bottom: 1rem; padding-left: 1.5rem;">Tersebar keseluruh Indonesia dan bisa diakses di mana saja</p>
+                <p style="color: white; padding-left: 1.5rem;">Menyediakan local contest untuk siapa saja ingin berkompetisi lokal</p>
+                <p style="color: white; margin-top:7.3rem; margin-bottom: 1rem; padding-left: 1.5rem;">Tersebar keseluruh Indonesia dan bisa diakses di mana saja</p>
             </div>
         </div>
     </div>
    
-    <div class="black-container footer-landing py-1" style="background-color:#1A1A1B;  justify-content: center; clip-path: polygon(0 0, 100% 80%, 100% 100%, 0% 100%);">
-        <footer class="footer" style="padding-top:3rem;">
-            <p style="color: white; margin-top:.8rem">Copyright &copy; 2023 Solveblem</p>
-        </footer>
-    </div>
-  <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
-</body>
-
-</html>
+@endsection
 
