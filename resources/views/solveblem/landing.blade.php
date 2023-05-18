@@ -7,7 +7,7 @@
                 Biarkan skillmu yang berbicara
             </h1>
             <button class="btn-mulai">
-                <a href="{{ url('') }}" class="mulai-coding" style="color: white">Mulai Coding</a>
+                <a href="{{ url('buka/visual') }}" class="mulai-coding" style="color: white">Mulai Coding</a>
             </button>
             <div class="services-content" style="margin-top:3rem;">
                 <div class="landing-left-content landing-left-content-one">

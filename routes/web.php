@@ -63,3 +63,7 @@ Route::get('/profiles/{user:username}', [ProfileController::class, 'index']);
 
 //About
 Route::get('/about', [SolveblemController::class, 'about']);
+
+// Buka visual
+
+Route::get('/buka/visual', [SolveblemController::class, 'visual']);
